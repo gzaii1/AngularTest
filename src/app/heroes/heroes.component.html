@@ -1,0 +1,14 @@
+<h2>{{hero.name | uppercase }} Details</h2>
+<div><span>id:</span>{{hero.id}}</div>
+<div>
+    <label>name:
+        <!-- 双向数据绑定,需要在app.module.ts中引入FormsModule -->
+        <input type="text" [(ngModel)]="hero.name"  placeholder="name">
+    </label>
+</div>
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let item of heroes">{{item.name}}</li>
+</ul>
+
